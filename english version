@@ -1,0 +1,111 @@
+"use client";
+import React from 'react';
+import {
+  ArrowRight, CheckCircle2, Star, Zap,
+  Shield, BarChart3, Globe, Users
+} from 'lucide-react';
+
+export default function ClawMarketplace() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* --- NAVIGATION --- */}
+      <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div className="text-2xl font-bold text-slate-900">ClawMarketplace</div>
+        <div className="flex gap-8 items-center">
+          <a href="#features" className="text-slate-700 hover:text-slate-900">Features</a>
+          <a href="#pricing" className="text-slate-700 hover:text-slate-900">Pricing</a>
+          <a href="#reviews" className="text-slate-700 hover:text-slate-900">Reviews</a>
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+            Start Free Trial
+          </button>
+        </div>
+      </nav>
+
+      {/* --- HERO SECTION --- */}
+      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+        <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+          New: AI-Powered Funnel Analytics
+        </div>
+        
+        <h1 className="text-6xl font-bold text-slate-900 mb-6">
+          Scale your marketplace faster than ever before.
+        </h1>
+        
+        <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+          The all-in-one platform to automate your funnel, increase conversions and dominate your revenue.
+        </p>
+
+        <div className="flex gap-4 justify-center mb-16">
+          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 flex items-center gap-2">
+            Launch Your Funnel <ArrowRight size={20} />
+          </button>
+          <button className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-50">
+            Watch Demo
+          </button>
+        </div>
+
+        <p className="text-slate-600 font-semibold mb-4">TRUSTED BY TOP TEAMS</p>
+      </section>
+
+      {/* --- FEATURES --- */}
+      <section id="features" className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">
+          Built for Results
+        </h2>
+        <p className="text-center text-slate-600 mb-12 text-lg">
+          Everything you need to run a million-dollar platform.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { icon: <BarChart3 size={32} />, title: "Real-time Data", desc: "See exactly where your visitors drop off in the funnel." },
+            { icon: <Globe size={32} />, title: "Global Scaling", desc: "Sell worldwide with local payment methods." },
+            { icon: <Shield size={32} />, title: "Enterprise Security", desc: "Your data is safe with our bank-grade encryption." }
+          ].map((f, i) => (
+            <div key={i} className="p-6 bg-white border border-slate-200 rounded-xl hover:shadow-lg transition">
+              <div className="text-blue-600 mb-4">{f.icon}</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{f.title}</h3>
+              <p className="text-slate-600">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- REVIEWS --- */}
+      <section id="reviews" className="max-w-7xl mx-auto px-6 py-20">
+        <div className="flex gap-2 justify-center mb-8">
+          {[...Array(5)].map((_, i) => <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />)}
+        </div>
+
+        <p className="text-center text-slate-700 text-lg mb-8 max-w-2xl mx-auto">
+          "ClawMarketplace increased our conversions by 45% in the first month. The funnel builder is unmatched in ease of use."
+        </p>
+
+        <div className="text-center">
+          <p className="font-bold text-slate-900">Jan van Dam</p>
+          <p className="text-slate-600">CEO @ GrowthStack</p>
+        </div>
+      </section>
+
+      {/* --- CTA SECTION --- */}
+      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          Ready to dominate the market?
+        </h2>
+        <p className="text-slate-600 mb-8 text-lg">
+          Join 500+ entrepreneurs scaling their business with ClawMarketplace.
+        </p>
+        
+        <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 mb-4">
+          START NOW FOR FREE
+        </button>
+        <p className="text-slate-600">No credit card required • 14-day trial</p>
+      </section>
+
+      {/* --- FOOTER --- */}
+      <footer className="bg-slate-900 text-white text-center py-8">
+        <p>© 2026 ClawMarketplace. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
