@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for clawmarketplace on 2026-05-06T19:59:58Z
+# fly.toml app configuration file generated for clawmarketplace-tkbikg on 2026-05-06T21:48:44Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'clawmarketplace'
-primary_region = 'cdg'
+app = 'clawmarketplace-tkbikg'
+primary_region = 'ams'
 
 [build]
 
